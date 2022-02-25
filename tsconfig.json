@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "target": "esnext",
+    "outDir": "lib",
+    "declaration": true,
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
