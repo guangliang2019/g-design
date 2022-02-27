@@ -10,3 +10,5 @@ export interface GIconOptions {
 export interface GGlobalConfig {
   classPrefix?: string;
 }
+
+export type EmitType<T> = T | T[];

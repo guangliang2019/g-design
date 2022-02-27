@@ -8,7 +8,7 @@ import Layout, {
   LayoutFooter,
   LayoutSider,
 } from './layout';
-import { GOptions } from "./_utils/type";
+import { GOptions } from "./_utils/types";
 
 
 const components: Record<string, Plugin> = {

@@ -1,6 +1,6 @@
 {
     "name": "g-design",
-    "version": "0.1.25",
+    "version": "0.1.31",
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",

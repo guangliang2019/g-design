@@ -1,6 +1,6 @@
 import { App } from "vue";
 import { getComponentPrefix, setGlobalConfig } from "../_utils/global-config";
-import { GOptions } from "../_utils/type";
+import { GOptions } from "../_utils/types";
 import _Icon from './icon.vue';
 
 const Icon = Object.assign(_Icon, {

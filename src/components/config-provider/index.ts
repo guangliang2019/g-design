@@ -1,7 +1,7 @@
 
 import { App } from 'vue'
 import { getComponentPrefix, setGlobalConfig } from '../_utils/global-config'
-import { GOptions } from '../_utils/type'
+import { GOptions } from '../_utils/types'
 import _ConfigProvider from './config-provider.vue'
 const ConfigProvider = Object.assign(_ConfigProvider, {
   install: (app: App, options?: GOptions) => {

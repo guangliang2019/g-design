@@ -1,6 +1,6 @@
 
 import type { App } from 'vue'
-import type { GOptions } from '../_utils/type'
+import type { GOptions } from '../_utils/types'
 import { getComponentPrefix, setGlobalConfig } from '../_utils/global-config'
 import _Button from './Button.vue'
 

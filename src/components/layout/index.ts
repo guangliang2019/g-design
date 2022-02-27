@@ -1,6 +1,6 @@
 
 import { App, Plugin } from 'vue'
-import { GOptions } from '../_utils/type'
+import { GOptions } from '../_utils/types'
 import { getComponentPrefix, setGlobalConfig } from '../_utils/global-config'
 import _Layout from './Layout.vue'
 import _LayoutHeader from './LayoutHeader.vue'

@@ -1,6 +1,6 @@
 import { App, getCurrentInstance, inject } from "vue";
 import { configProviderInjectionKey } from '../config-provider/context';
-import { GOptions } from "./type";
+import { GOptions } from "./types";
 
 const COMPONENT_PREFIX = 'G';
 const CLASS_PREFIX = 'g';
