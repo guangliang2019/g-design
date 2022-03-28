@@ -8,6 +8,10 @@
   flex-direction: column;
   margin: 0;
   padding: 0;
+  height: 100%;
+  background: var(--color-bg-1);
+  color: var(--color-text-1);
+  transition: 300ms all;
 
   &-sider {
     position: relative;
@@ -16,9 +20,7 @@
     margin: 0;
     padding: 0;
     background: @layout-sider-background;
-    transition: width @transition-duration-2
-      @transition-timing-function-standard;
-
+    transition: 300ms all;
     &-children {
       height: 100%;
       overflow: auto;
@@ -46,9 +48,11 @@
       height: @layout-trigger-height;
       color: var(~"@{cssvars-prefix}-color-white");
       background: @layout-trigger-dark-color;
+      border: inherit;
       cursor: pointer;
-      transition: width @transition-duration-2
-        @transition-timing-function-standard;
+      transition: 300ms all;
+      // transition: width @transition-duration-2
+      //   @transition-timing-function-standard;
 
       &-light {
         color: @layout-font-color;
@@ -60,7 +64,13 @@
 
   &-sider-light {
     background: @layout-sider-background-light;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.08);
+
+    //g-design default style
+    border-right: 1px solid var(--color-border);
+    color: var(--color-text-1);
+    display: flex;
+    flex-direction: column;
+    transition: 300ms all;
   }
 
   &-header {
@@ -77,14 +87,14 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    transition: 200ms all;
+    transition: 300ms all;
   }
 
   &-content {
     flex: 1;
 
     //g-design default style
-    transition: 200ms all;
+    transition: 300ms all;
     background: var(--color-bg-1);
     color: var(--color-text-1);
   }
