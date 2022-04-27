@@ -9,9 +9,10 @@
   </span>
 </template>
 
-<script>
-import { getPrefixCls } from "@/components/_utils/global-config";
-import { defineComponent } from "@vue/runtime-core";
+<script lang="ts">
+import { getPrefixCls } from "../../_utils/global-config";
+import { defineComponent, toRef } from "@vue/runtime-core";
+import useMenuContext from "../hooks/use-menu-context";
 
 export default defineComponent({
   name: "MenuIndent",
@@ -22,10 +23,13 @@ export default defineComponent({
     },
   },
   setup() {
-    const prefixCls = getPrefixCls('menu');
-    //const menuContext = use
-  }
+    const prefixCls = getPrefixCls("menu");
+    const menuContext = useMenuContext();
+
+    return {
+      prefixCls,
+      levelIndent: toRef(menuContext, "levelIndent"),
+    };
+  },
 });
 </script>
-
-<style></style>

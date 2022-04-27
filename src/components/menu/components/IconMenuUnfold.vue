@@ -1,10 +1,10 @@
 <template>
-  subpop
+  <span>u</span>
 </template>
 
 <script>
 export default {
-
+  name: "IconMenuUnfold"
 }
 </script>
 

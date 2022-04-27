@@ -11,17 +11,17 @@
     <div
       v-if="showTrigger"
       :class="triggerClassNames"
-      :style="{ width: siderWidth }"
+      :style="{ width: siderWidth - 2 }"
       @click="toggleTrigger"
     >
       <slot name="trigger" :collapsed="localCollapsed">
         <div v-if="!reverseArrow">
-          <div v-if="!localCollapsed">{{"<"}}</div>
-          <div v-else>{{">"}}</div>
+          <IconLeft v-if="!localCollapsed" />
+          <IconRight v-else />
         </div>
         <div v-else>
-          <div v-if="!localCollapsed">{{">"}}</div>
-          <div v-else>{{"<"}}</div>
+          <IconLeft v-if="localCollapsed" />
+          <IconRight v-else />
         </div>
       </slot>
     </div>
@@ -48,6 +48,9 @@ import { getPrefixCls } from "../_utils/global-config";
 import { isNumber } from "../_utils/is";
 import { LayoutSiderInjectionKey, SiderInjectionKey } from "./context";
 
+import IconLeft from "../icon/IconLeft.vue";
+import IconRight from "../icon/IconRight.vue";
+
 const generateId = (() => {
   let i = 0;
   return (prefix = "") => {
@@ -58,7 +61,7 @@ const generateId = (() => {
 
 export default defineComponent({
   name: "LayoutSider",
-  components: {},
+  components: { IconLeft, IconRight },
   props: {
     /**
      * @zh 主题
@@ -106,6 +109,13 @@ export default defineComponent({
     collapsedWidth: {
       type: Number,
       default: 48,
+    },
+    /**
+     * @zh 翻转折叠提示箭头的方向，当 Sider 在右边时可以使用
+     * @en Flip and fold the direction of the hint arrow, which can be used when Sider is on the right
+     */
+    reverseArrow: {
+      type: Boolean,
     },
     /**
      * @zh 触发响应式布局的断点, 详见[响应式栅格](/component/grid)

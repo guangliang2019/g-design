@@ -1,10 +1,10 @@
 <template>
-  subpop
+  <span>r</span>
 </template>
 
 <script>
 export default {
-
+  name: "IconRight"
 }
 </script>
 

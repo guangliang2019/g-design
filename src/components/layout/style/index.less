@@ -48,16 +48,15 @@
       height: @layout-trigger-height;
       color: var(~"@{cssvars-prefix}-color-white");
       background: @layout-trigger-dark-color;
-      border: inherit;
       cursor: pointer;
-      transition: 300ms all;
+      transition: inherit;
       // transition: width @transition-duration-2
       //   @transition-timing-function-standard;
 
       &-light {
         color: @layout-font-color;
         background: @layout-sider-background-light;
-        border-top: 1px solid @layout-trigger-light-color-border;
+        //border-top: 1px solid @layout-trigger-light-color-border;
       }
     }
   }

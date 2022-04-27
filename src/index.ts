@@ -1,1 +1,1 @@
-export { default } from './components/gDesign'
+export { default } from "./components/gDesign";
